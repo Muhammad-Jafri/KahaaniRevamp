@@ -1,19 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import {homepage} from './components/homepage/homepage.jsx'
+import React from 'react';
+import Homepage from './components/homepage/Homepage'; // Adjust the import path if needed
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-   
-        <homepage />
-      
-    </>
-  )
+    <div className="App">
+      <Homepage />
+    </div>
+  );
 }
 
-export default App
+export default App;

@@ -1,15 +1,15 @@
-import React from 'react'
+// import React from 'react'
 import './homepage.css'
 
-const homepage = () => {
+const Homepage = () => {
   return (
-    <div>
+    <>
         
     <h1>hello</h1>
 
-    </div>
+    </>
   )
 }
 
 
-export default homepage
+export default Homepage
