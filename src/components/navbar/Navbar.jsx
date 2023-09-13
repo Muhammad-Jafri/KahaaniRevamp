@@ -10,9 +10,9 @@ const Navbar = () => {
         <img src={Navbar_Logo} alt="Navbar_Logo" className='Navbar_Logo'/>  
 
         <div className='Navbar-content'>
-          <p style={{ color:'black' }}>Listen to stories</p>
+          <p>Listen to stories</p>
           
-          <p style={{color:'black'}}>Type and Tell</p>
+          <p>Type and Tell</p>
 
           <div className='Contact-Button'>
               Contact Us
