@@ -1,17 +1,16 @@
-import React from 'react'
-import './footer.css'
+import React from 'react';
+import './Footer.css'; // Make sure to import your CSS file
 
 const Footer = () => {
   return (
-    <div className='Footer'>
-        <div className='Footer-content'>
-            <p style={{ color:'black' }}>00-111-234321</p>
-            <p style={{ color:'black' }}>kahaani@lums.edu.pk</p>
-            <p style={{ color:'black' }}>Copyright 2023</p>
-        </div>
-
+    <div className='footer'>
+      <div className='footer-content'>
+        <p><strong>00-111-234321</strong></p>
+        <p><strong>kahaani@lums.edu.pk</strong></p>
+        <p>Copyright &copy; 2023</p>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

@@ -1,6 +1,32 @@
-.Footer {
-    display: flex;
-    justify-content: space-between;
-    
+/* Footer.css */
 
-}
+/* Style for the main footer container */
+.footer {
+     /* Background color for the footer */
+    color: black; /* Text color */
+    padding: 20px 0; /* Add some padding to the top and bottom */
+    text-align: center; /* Center-align text */
+    display: flex;
+  }
+  
+  /* Style for the content within the footer */
+  .footer-content {
+    max-width: 600px; /* Limit the width of the content for better readability */
+    margin: 0 auto; /* Center-align the content within the footer */
+  }
+  
+  /* Style for the individual paragraphs */
+  .footer-content p {
+    margin: 1px 0; /* Add some spacing between paragraphs */
+  }
+  
+  /* Style for links, if needed */
+  .footer-content a {
+    color: #ffc107; /* Customize link color */
+    text-decoration: none; /* Remove underlines from links */
+  }
+  
+  /* Style for links when hovered */
+  .footer-content a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
