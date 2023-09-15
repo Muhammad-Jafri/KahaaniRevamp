@@ -1,5 +1,5 @@
-import React from 'react'
-import './footer.css'
+import React from 'react';
+import './Footer.css'; // Make sure to import your CSS file
 
 import {AiOutlineMail} from 'react-icons/ai'
 import {IoCallOutline} from 'react-icons/io5'
@@ -18,7 +18,7 @@ const Footer = () => {
         </div>     
 
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
