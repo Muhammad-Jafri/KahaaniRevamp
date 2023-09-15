@@ -1,14 +1,21 @@
 import React from 'react'
 import './footer.css'
 
+import {AiOutlineMail} from 'react-icons/ai'
+import {IoCallOutline} from 'react-icons/io5'
+
 const Footer = () => {
   return (
     <div className='Footer'>
         <div className='Footer-content'>
-            <p style={{ color:'black' }}>00-111-234321</p>
-            <p style={{ color:'black' }}>kahaani@lums.edu.pk</p>
-            <p style={{ color:'black' }}>Copyright 2023</p>
-        </div>
+            {<IoCallOutline style={{ fontSize: '24px' }} className='Footer-icon' />} 
+          <p><strong>00-111-234321 &emsp;&emsp; 
+            {<AiOutlineMail style={{ fontSize: '24px' }} className='Footer-icon' />} 
+            &ensp;kahaani@lums.edu.pk</strong></p>
+          &emsp;&emsp;&emsp;
+          
+          <p>Copyright © 2023 Kahaani</p>
+        </div>     
 
     </div>
   )

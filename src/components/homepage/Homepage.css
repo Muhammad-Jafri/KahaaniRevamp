@@ -1,3 +1,45 @@
-.hp-body{
-    background-color: #FFFC00;
+
+
+.HP-mainbox{
+    display: inline-block;
+}
+
+
+.HP-contentBox{
+    float: left;
+    padding-left: 10%;
+    width:40%;
+    margin-top: 7%;
+}
+
+.HP-titleBox{
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    color: black;
+    line-height: 70px;
+}
+
+
+.HP-text{
+    font-family: "Varela Round", sans-serif;
+    color: black;
+    font-size: 22px;
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: left;
+    margin-top: -8%;
+}
+
+
+.HP-imgbox{
+    float: right;
+    width: 40%;
+    padding-right: 7%;
+    padding-top: 5%;
+}
+
+.HP_Img{
+    width: 90%;
 }

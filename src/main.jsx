@@ -4,7 +4,7 @@ import App from './App.jsx'
 import './index.css'
 
 
-import sideImg from './assets/side_pattern.png'
+import sideImg from './assets/images/side_pattern.png'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -4,14 +4,14 @@
 html, body {
   height: 100%;
   margin: 0 0 0 0;
-  padding: 0 0 0 0;
+  padding: 50px 50px 50px 50px;
 }
 
 /* Apply styles to the App component to make it cover the entire viewport */
 .App {
   height: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 50px;
+  padding: 50px 50px 50px 50px;
 }
 
 /* Add any additional styles for your App component here */
