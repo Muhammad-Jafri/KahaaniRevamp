@@ -1,12 +1,16 @@
 import React from 'react';
 import Homepage from './components/homepage/Homepage';
-import Footer from './common/footer/footer';
+import Librarypage from './components/library/librarypage';
+
 
 function App() {
   return (
     <div className="App">
-      <Homepage />
-      <Footer />
+      {/* <Homepage /> */}
+      <Librarypage />
+  
+
+    
 
     </div>
   );
