@@ -4,6 +4,7 @@ import Navbar from '../../common/navbar/Navbar'
 import MyButton from '../../common/Button/MyButton'
 import HP_Image from "../../assets/images/homepage_img.png";
 import './homepage.css'
+import Footer from '../../common/footer/footer';
 
 
 const Homepage = () => {
@@ -13,35 +14,42 @@ const Homepage = () => {
   
   return (
     <>
-      <Navbar /> 
+
+<Navbar /> 
 
 
-      <div className="HP-mainbox">
-        
-        <div className='HP-contentBox'>
-          <div className="HP-titleBox">
-            <p>Welcome to Kahaani (کہانی)!</p>
-          </div>
-          
-          <div className="HP-text">
-            <p>
-              Kahaani is an online platform to help users learn Urdu through{" "}
-              <span style={{ color: "#D303CE" }}>listening</span> activities.
-            </p>
-            <p>We provide a rich digital library of popular Urdu short stories as audiobooks and a playground where students can tell Kahaani what to say!</p>
-          </div>
+<div className="HP-mainbox">
+  
+  <div className='HP-contentBox'>
+    <div className="HP-titleBox">
+      <p>Welcome to Kahaani (کہانی)!</p>
+    </div>
+    
+    <div className="HP-text">
+      <p>
+        Kahaani is an online platform to help users learn Urdu through{" "}
+        <span style={{ color: "#D303CE" }}>listening</span> activities.
+      </p>
+      <p>We provide a rich digital library of popular Urdu short stories as audiobooks and a playground where students can tell Kahaani what to say!</p>
+    </div>
 
-          <br></br>
-          <MyButton name="Learn More"/>
-        </div>
+    <br></br>
+    <MyButton name="Learn More"/>
+  </div>
 
-        <div className="HP-imgbox">
-          <img src={HP_Image} alt="My Image" className='HP_Img'/>
-        </div>
+  <div className="HP-imgbox">
+    <img src={HP_Image} alt="My Image" className='HP_Img'/>
+  </div>
 
-      </div>
+</div>
+
+
+
+<Footer />
+
 
     </>
+      
   )
 }
 
