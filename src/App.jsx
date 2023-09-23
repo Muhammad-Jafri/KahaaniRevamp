@@ -6,8 +6,8 @@ import Librarypage from './components/library/librarypage';
 function App() {
   return (
     <div className="App">
-      {/* <Homepage /> */}
-      <Librarypage />
+      <Homepage />
+      {/* <Librarypage /> */}
   
 
     
