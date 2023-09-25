@@ -1,31 +1,18 @@
-import React from 'react'
-import Navbar from '../../common/navbar/Navbar'
-import './librarypage.css'
+import React, { useState } from 'react';
+import Navbar from '../../common/navbar/Navbar';
+import SearchBar from '../../common/SearchBar/SearchBar';
+import './librarypage.css';
+
 
 const Librarypage = () => {
+
   return (
     <>
+      <Navbar />
+      <SearchBar />
 
-    <Navbar/>
-
-    <div className = "searchbar">
-        <input className = "searchinput" type="text" placeholder="Search for kahaani..." name="search"></input>
-    </div>
-
-    
-    
-
-    
-    
-
-
-    
-        
-    
     </>
+  );
+};
 
-    
-  )
-}
-
-export default Librarypage
+export default Librarypage;
