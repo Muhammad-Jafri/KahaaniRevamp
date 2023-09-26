@@ -7,8 +7,8 @@ const MyButton = ({name}) => {
   
     return (
         <Button variant="contained" className='Contact-Button'>
-              {name}
-          </Button>
+            {name}
+        </Button>
     )
 }
 

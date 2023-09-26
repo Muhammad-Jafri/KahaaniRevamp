@@ -43,3 +43,16 @@
 .HP_Img{
     width: 90%;
 }
+
+
+@media (max-width: 900px) {
+    .HP-imgbox{
+        height: 80%;
+    }
+
+    .HP_Img{
+        position: relative;
+        width: 90%;
+        height: 500px;
+    }
+  }

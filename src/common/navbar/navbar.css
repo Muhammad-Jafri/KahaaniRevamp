@@ -1,16 +1,14 @@
 .NavBar{
-    /* margin-right: 500px; */
+    margin-right: 10% !important;
     margin-left: 10%;
     margin-top: 5%;
     display: flex;
-    /* align-items: 'center'; */
     justify-content: space-between;
-    width: 80%;
+    width: 80% !important;
     height: 50px;
     outline: 5px solid black;
     border-radius: 10px;
     padding: 10px;
-    /* min-width: 600px; */
     overflow: hidden;
 }
 
@@ -43,18 +41,20 @@
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .NavBar {
         flex-direction: column; 
         align-items: center; 
         height: auto; 
-        width: 70%; 
+        width: 70% !important; 
         margin: 5% auto;
+        margin-right: 15% !important;
+        margin-left: 15% !important;
     }
   
     .Navbar_Logo {
         margin-bottom: -10px; 
-        width: 50%;
+        width: 70%;
     }
   
     .Navbar-content {
