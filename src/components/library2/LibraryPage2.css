@@ -1,0 +1,44 @@
+/* ImageLibrary.css */
+
+.lp2-image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-right: 5%;
+    margin-left: 5%;
+    color: black;
+    font-family: "Gill Sans", sans-serif;
+    transition: transform 3.5s ease; /* Added transition for smooth transformation */
+  }
+  
+  .lp2-image-item {
+    text-align: center;
+    width: 250px;
+    z-index: 1;
+  }
+  
+  .lp2-image-item img {
+    width: 100%;
+    height: 250px;
+    opacity: 1;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .lp2-image-item img:hover {
+    transform: scale(1.07);
+    opacity: 0.6;
+    transition: transform 0.5s ease;
+  }
+  
+  .show-more {
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+    color: blue;
+    transition: color 0.5s ease; /* Added transition for smooth color change */
+  }
+  
