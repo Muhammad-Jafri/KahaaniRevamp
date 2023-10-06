@@ -1,6 +1,6 @@
 
 
-.container {
+.lp-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,7 +82,7 @@
 
 
 
-   /* ARROW BUTTON STYLES */
+   /* lp-arrow BUTTON STYLES */
 
   .my-button-container {
     position: absolute;
@@ -98,7 +98,7 @@
 
   
 
-  .arrow-box {
+  .lp-arrow-box {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,17 +106,17 @@
     margin-bottom: 5%;
     margin-top: -7%;
   }
-  .arrow-text{
+  .lp-arrow-text{
     width: 30%;
   }
   
   
-  .arrow-box h3 {
+  .lp-arrow-box h3 {
     font-size: larger;
     color: black;
   }
   
-  .arrow-box p{
+  .lp-arrow-box p{
     font-family: 'Rounded Mplus 1c Bold' ;
     font-weight:100;
     color: rgb(107, 107, 107);
@@ -124,8 +124,8 @@
   }
   
   
-  .arrow-box .arrow-right,
-  .arrow-box .arrow-left
+  .lp-arrow-box .lp-arrow-right,
+  .lp-arrow-box .lp-arrow-left
    {
     width: 40px; 
     height: 40px; 
@@ -134,29 +134,29 @@
     cursor: pointer;
   }
 
-  .arrow-box .arrow-right:hover,
-  .arrow-box .arrow-left:hover{
+  .lp-arrow-box .lp-arrow-right:hover,
+  .lp-arrow-box .lp-arrow-left:hover{
     transform: scale(1.2);
   }
 
-  .arrow-box .arrow-right.end:hover,
-  .arrow-box .arrow-left.end:hover{
+  .lp-arrow-box .lp-arrow-right.end:hover,
+  .lp-arrow-box .lp-arrow-left.end:hover{
     transform: scale(1);
   }
 
 
 
-  .arrow-box .arrow-left {
-    margin-left: auto; /* Push the first arrow to the left */
+  .lp-arrow-box .lp-arrow-left {
+    margin-left: auto; /* Push the first lp-arrow to the left */
   }
   
-  .arrow-box .arrow-right {
-    margin-right: auto; /* Push the last arrow to the right */
+  .lp-arrow-box .lp-arrow-right {
+    margin-right: auto; /* Push the last lp-arrow to the right */
   }
   
 
-  .arrow-box .arrow-right.end,
-  .arrow-box .arrow-left.end
+  .lp-arrow-box .lp-arrow-right.end,
+  .lp-arrow-box .lp-arrow-left.end
    {
     color: #F0F1F2;
     cursor: default;

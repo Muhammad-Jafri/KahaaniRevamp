@@ -3,10 +3,10 @@ import Button from '@mui/material/Button';
 import './MyButton.css'
 
 
-const MyButton = ({name}) => {
+const MyButton = ({name, onClick}) => {
   
     return (
-        <Button variant="contained" className='Contact-Button'>
+        <Button variant="contained" className='Contact-Button' onClick={onClick}>
             {name}
         </Button>
     )
