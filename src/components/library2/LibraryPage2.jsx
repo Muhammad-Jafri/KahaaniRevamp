@@ -64,8 +64,11 @@ const LibraryPage2 = () => {
             ))}
           </div>
           
-          {!showMoreStates[index] && <MyButton name="SHOW MORE STORIES" onClick={() => toggleShowMore(index)}/>}
+          {/* {!showMoreStates[index] && <MyButton name="SHOW MORE STORIES" onClick={() => toggleShowMore(index)}/>}
           {showMoreStates[index] && <MyButton name="SHOW LESS" onClick={() => toggleShowMore(index)}/>}
+           */}
+          {!showMoreStates[index] && <h2 onClick={() => toggleShowMore(index)}>SHOW MORE STORIES</h2>}
+          {showMoreStates[index] && <h2 onClick={() => toggleShowMore(index)}>SHOW LESS</h2>}
           
           {/* <div className="show-more" onClick={() => toggleShowMore(index)}>
             {!showMoreStates[index] && <p>SHOW MORE STORIES</p>}
