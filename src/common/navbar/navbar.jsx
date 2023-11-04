@@ -8,12 +8,16 @@ import Navbar_Logo from '../../assets/images/Navbar_Kahaani_logo.png'
 const Navbar = () => {
   return (
     <div className='NavBar'>
-        <img src={Navbar_Logo} alt="Navbar_Logo" className='Navbar_Logo'/>  
+
+        <a href="/">
+          <img src={Navbar_Logo} alt="Navbar_Logo"  className='Navbar_Logo' />
+        </a>
+  
 
         <div className='Navbar-content'>
-          <p>Listen to stories</p>
+          <p>Listen to Stories</p>
           
-          <p>Type and Tell</p>
+          <p>Give Feedback</p>
 
           <MyButton name="Contact Us"/>
 

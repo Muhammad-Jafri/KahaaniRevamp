@@ -43,6 +43,7 @@ body {
   right: 0;
   width: 50px; /* Adjust the width as needed */
   height: 100%; /* Cover the entire height of the viewport */
+  z-index: -1;
 }
 
 

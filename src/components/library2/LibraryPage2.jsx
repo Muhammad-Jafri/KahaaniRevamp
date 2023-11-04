@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './LibraryPage2.css'
 import Navbar from '../../common/navbar/Navbar';
 import SearchBar from '../../common/SearchBar/SearchBar';
@@ -58,18 +58,18 @@ const LibraryPage2 = () => {
 
             {images.slice(0, showMoreStates[index] ? images.length : 4).map((image, index) => (
               <div key={index} className="lp2-image-item">
-                <img src={image.picture} alt={`Image ${index + 1}`} />
+                <a href="/story"><img src={image.picture} alt={`Image ${index + 1}`} /></a>
                 <p>{image.title}</p>
               </div>
             ))}
           </div>
           
-          {/* {!showMoreStates[index] && <MyButton name="SHOW MORE STORIES" onClick={() => toggleShowMore(index)}/>}
+          {!showMoreStates[index] && <MyButton name="SHOW MORE STORIES" onClick={() => toggleShowMore(index)}/>}
           {showMoreStates[index] && <MyButton name="SHOW LESS" onClick={() => toggleShowMore(index)}/>}
-           */}
-          {!showMoreStates[index] && <h2 onClick={() => toggleShowMore(index)}>SHOW MORE STORIES</h2>}
-          {showMoreStates[index] && <h2 onClick={() => toggleShowMore(index)}>SHOW LESS</h2>}
           
+          {/* {!showMoreStates[index] && <h2 onClick={() => toggleShowMore(index)}>SHOW MORE STORIES</h2>}
+          {showMoreStates[index] && <h2 onClick={() => toggleShowMore(index)}>SHOW LESS</h2>}
+           */}
           {/* <div className="show-more" onClick={() => toggleShowMore(index)}>
             {!showMoreStates[index] && <p>SHOW MORE STORIES</p>}
             {showMoreStates[index] && <p>SHOW LESS</p>}
