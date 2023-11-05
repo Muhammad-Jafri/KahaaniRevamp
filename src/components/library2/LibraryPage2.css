@@ -1,10 +1,24 @@
 /* ImageLibrary.css */
+@font-face {
+  font-family: 'MPLUSRounded1c-Bold';
+  src: url(..\..\assets\fonts\MPLUSRounded1c-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'MPLUSRounded1c-Regular';
+  src: url(..\..\assets\fonts\MPLUSRounded1c-Regular.ttf);
+}
+
+
+
+
 
 .lib-page{
     color: black;
     text-align: center;
     margin-top: 70px;
-    font-family: "Gill Sans", sans-serif;
+    /* font-family: "Gill Sans", sans-serif; */
+    font-family: 'MPLUSRounded1c-Regular';
     transition: height 0.5s ease;
     margin-bottom: 40px;
 }
@@ -13,7 +27,8 @@
 }
 
 .lib-page h1{
-  font-family: "Verdana", sans-serif;
+  /* font-family: "Verdana", sans-serif; */
+  font-family: 'MPLUSRounded1c-Bold';
   text-shadow: 4px 2px 5px rgba(0, 0, 0, 0.25);
   text-align: left;
   margin-left: 10%;
@@ -22,7 +37,8 @@
 
 
 .lib-page h2{
-  font-family: "Arial", sans-serif;
+  /* font-family: "Arial", sans-serif; */
+  font-family: "MPLUSRounded1c-Regular";
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
   text-align: right;
   margin-right: 10%;
@@ -45,7 +61,8 @@
     margin-right: 5%;
     margin-left: 5%;
     color: black;
-    font-family: "Gill Sans", sans-serif;
+    /* font-family: "roboto", sans-serif; */
+    font-family: "Mplusrounded1c-Regular";
     transition: transform 3.5s ease; /* Added transition for smooth transformation */
   }
   

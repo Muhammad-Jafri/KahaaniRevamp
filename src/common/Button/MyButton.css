@@ -1,6 +1,7 @@
 
 .Contact-Button{
     font-family: 'Calibri' !important;
+    text-transform: none;
     font-weight: 550 !important;
     background-color: #4FE8F2 !important;
     border-radius: 20px !important;

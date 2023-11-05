@@ -1,3 +1,18 @@
+
+@font-face {
+    font-family: 'MPLUSRounded1c-Bold';
+    src: url(..\..\assets\fonts\MPLUSRounded1c-Bold.ttf);
+  }
+
+@font-face {
+    font-family: 'MPLUSRounded1c-Regular';
+    src: url(..\..\assets\fonts\MPLUSRounded1c-Regular.ttf);
+  }
+
+
+
+
+
 .NavBar{
     margin-right: 10% !important;
     margin-left: 10%;
@@ -21,6 +36,10 @@
     font-weight: 700;
     color: black;
     align-items: center;
+}
+
+.Navbar-content p{
+    font-family: 'MPLUSRounded1c-Bold';
 }
 
 .Navbar-content p:hover {

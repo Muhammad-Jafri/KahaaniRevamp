@@ -27,7 +27,7 @@ const LibraryPage2 = () => {
   ];
 
   const all_images = [moral_images,funny_images]
-  const all_titles = ["MORAL STORIES","FUNNY STORIES"]
+  const all_titles = ["Moral Stories","Funny Stories"]
 
 
   const [showMoreStates, setShowMoreStates] = useState(all_images.map(() => false));
@@ -64,8 +64,8 @@ const LibraryPage2 = () => {
             ))}
           </div>
           
-          {!showMoreStates[index] && <MyButton name="SHOW MORE STORIES" onClick={() => toggleShowMore(index)}/>}
-          {showMoreStates[index] && <MyButton name="SHOW LESS" onClick={() => toggleShowMore(index)}/>}
+          {!showMoreStates[index] && <MyButton name="Show More" onClick={() => toggleShowMore(index)}/>}
+          {showMoreStates[index] && <MyButton name="Show Less" onClick={() => toggleShowMore(index)}/>}
           
           {/* {!showMoreStates[index] && <h2 onClick={() => toggleShowMore(index)}>SHOW MORE STORIES</h2>}
           {showMoreStates[index] && <h2 onClick={() => toggleShowMore(index)}>SHOW LESS</h2>}

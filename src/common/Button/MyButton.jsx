@@ -6,7 +6,7 @@ import './MyButton.css'
 const MyButton = ({name, onClick}) => {
   
     return (
-        <Button variant="contained" className='Contact-Button' onClick={onClick}>
+        <Button style={{textTransform : 'none'}} variant="contained" className='Contact-Button' onClick={onClick}>
             {name}
         </Button>
     )

@@ -47,3 +47,12 @@ body {
 }
 
 
+@font-face {
+  font-family: 'MPLUSRounded1c-Regular';
+  src: url(.\src\assets\fonts\MPLUSRounded1c-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'MPLUSRounded1c-Bold';
+  src: url(.\src\assets\fonts\MPLUSRounded1c-Bold.ttf);
+}

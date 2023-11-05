@@ -34,7 +34,7 @@ const Homepage = () => {
     </div>
 
     <br></br>
-    <MyButton name="Learn More"/>
+    <MyButton name="Learn More About Kahaani"/>
   </div>
 
   <div className="HP-imgbox">

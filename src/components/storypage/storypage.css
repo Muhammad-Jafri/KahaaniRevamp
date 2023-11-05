@@ -1,3 +1,23 @@
+@font-face {
+    font-family: 'MPLUSRounded1c-Bold';
+    src: url(..\..\assets\fonts\MPLUSRounded1c-Bold.ttf);
+  }
+  
+  @font-face {
+    font-family: 'MPLUSRounded1c-Regular';
+    src: url(..\..\assets\fonts\MPLUSRounded1c-Regular.ttf);
+  }
+  
+  @font-face {
+    font-family: 'noto-urdu';
+    src: url(..\..\assets\fonts\NotoNastaliqUrdu-VariableFont_wght.ttf);
+  }
+  
+  
+
+
+
+
 /*  */
 .player {
     display: flex;
@@ -51,7 +71,7 @@
 }
 
 .player-text {
-    font-family: "Noto Nastaliq Urdu", serif;
+    font-family: "noto-urdu";
     font-weight: 400;
     font-size: 24px;
     line-height: 67.2px;
@@ -92,7 +112,7 @@
 }
 
 .audio-player-name {
-    font-family: open sans;
+    font-family: 'MPLusrounded1c-Bold';
     font-weight: 600;
     font-size: 18px;
     line-height: 15.2px;
@@ -101,7 +121,7 @@
     margin-top: 5%;
 }
 .audio-player-author {
-    font-family: open sans;
+    font-family: "MPLusrounded1c-Regular";
     font-weight: 400;
     font-size: 14px;
     line-height: 10.2px;
