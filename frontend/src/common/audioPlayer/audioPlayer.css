@@ -1,0 +1,352 @@
+.audioPlayer {
+    --primary: #6485E2;
+    ;
+    --secondary: #fff;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 28px;
+
+}
+
+.backward {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 123px;
+}
+
+.backward:hover {
+    color: var(--primary);
+}
+
+.forward {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 28px;
+
+}
+
+.forward:hover {
+    color: var(--primary);
+}
+
+.playPause-button {
+    /* background: var(--primary); */
+    background: black;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 28px;
+}
+
+.play-player-icon {
+    position: relative;
+    left: 3px;
+}
+
+.currentTime,
+.duration {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin-left: 12px;
+}
+
+.currentTime {
+    margin-left: 25px;
+    margin-right: 12px;
+}
+
+.progressBar-f1 {
+    --bar-bg: #EEEEEE;
+    --seek-before-width: 0;
+    --seek-before-color: #515151;
+    /* --knobby: #6485E2; */
+    --knobby: #000000;
+    --selectedKnobby: #26c9c3;
+
+    appearance: none;
+    background: var(--bar-bg);
+    border-radius: 10px;
+    border: 1.5px solid black;
+    position: relative;
+    width: 100%;
+    height: 11px;
+    outline: none;
+}
+
+.pbx7 {
+
+    width: 360px;
+}
+
+/* progress bar - safari */
+.progressBar-f1::-webkit-slider-runnable-track {
+    /* background: var(--bar-bg); */
+    background: white;
+    
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: 11px;
+    outline: none;
+}
+
+/* progress bar - firefox */
+.progressBar-f1::-moz-range-track {
+    background: var(--bar-bg);
+    ;
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: 11px;
+    outline: none;
+}
+
+.progressBar-f1::-moz-focus-outer {
+    border: 0;
+}
+
+/* progress bar - chrome and safari */
+.progressBar-f1::before {
+    content: '';
+    height: 11px;
+    width: var(--seek-before-width);
+    background-color: var(--seek-before-color);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* progress bar - firefox */
+.progressBar-f1::-moz-range-progress {
+    background-color: var(--seek-before-color);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 11px;
+}
+
+/* knobby - chrome and safari */
+.progressBar-f1::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--knobby);
+    cursor: pointer;
+    position: relative;
+    margin: -2px 0 0 0;
+    z-index: 3;
+    box-sizing: border-box;
+}
+
+/* knobby while dragging - chrome and safari */
+.progressBar-f1:active::-webkit-slider-thumb {
+    transform: scale(1.2);
+    background: var(--selectedKnobby);
+}
+
+/* knobby - firefox */
+.progressBar-f1::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: transparent;
+    background-color: var(--knobby);
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    box-sizing: border-box;
+}
+
+/* knobby while dragging - firefox */
+.progressBar-f1:active::-moz-range-thumb {
+    transform: scale(1.2);
+    background: var(--selectedKnobby);
+}
+
+.playbackSpeedButton-sm {
+    border: 1px solid black;
+    border-radius: 100px;
+    color: black;
+    background-color: transparent;
+    margin-left: 45px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 47px;
+    height: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.play-player {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+
+
+.sm-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width:1000px) and (max-width:1300px) {
+
+    .audio-player-img {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .duration{
+        margin-right: 0px;
+    }
+}
+
+
+
+@media screen and (min-width:300px) and (max-width:1000px) {
+    .audioPlayer {
+        
+
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: -30px;
+        
+
+
+    }
+
+    .sm-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 22.5px;
+    }
+
+    .play-player {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+        margin-top: 19.5px;
+    }
+
+    .duration {
+        font-family: 'Open Sans', sans-serif;;
+        font-size: 16px;
+        margin-left: 12px;
+        margin-right: 25px;
+    }
+
+    .currentTime {
+        margin-left: 25px;
+        margin-right: 12px;
+    }
+
+    .progressBar-f1 {
+        appearance: none;
+        border-radius: 10px;
+        position: relative;
+        width: 100%;
+        height: 11px;
+        outline: none;
+    }
+
+    .playbackSpeedButton-sm {
+        border: 1px solid black;
+        border-radius: 100px;
+        color: black;
+        background-color: transparent;
+        margin-left: 10px;
+        padding: 5px 10px;
+        font-size: 14px;
+        cursor: pointer;
+        width: 47px;
+        height: 29px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 100px;
+
+    }
+
+    .forward {
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        font-family: 'Open Sans', sans-serif;;
+        font-size: 16px;
+        cursor: pointer;
+        margin-left: 0px;
+    }
+
+    .backward {
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        font-family: 'Open Sans', sans-serif;;
+        font-size: 16px;
+        cursor: pointer;
+        margin-left: 159px;
+    }
+
+    .playPause-button {
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        color: var(--secondary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 33px;
+        margin-right: 33px;
+    }
+
+    .play {
+        position: relative;
+        left: 5px;
+    }
+
+    .pbx7 {
+
+        width: 222px;
+    }
+}
