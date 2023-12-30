@@ -6,7 +6,7 @@ import SearchBar from '../../common/SearchBar/SearchBar';
 import MyButton from '../../common/Button/MyButton'
 // import { Link } from 'react-router-dom';
 
-const LibraryPage2 = () => {
+function LibraryPage2 () {
   
 
   const moral_images = [
@@ -46,7 +46,7 @@ const LibraryPage2 = () => {
 
       })
 
-  }, [library]);
+  }, []);
 
   const all_images = [moral_images,funny_images]
   const all_titles = [" Stories","Funny Stories"]
@@ -64,10 +64,6 @@ const LibraryPage2 = () => {
     }); 
   };
 
-
-
-
-
   return (
     <>
       <Navbar />
@@ -82,12 +78,12 @@ const LibraryPage2 = () => {
           <div key={index} className="lib-page">
             <h1>{genre !== "undefined" ? genre : "Other"}</h1>
 
-            <div className="lp2-image-container">
-              {data.slice(0, showMoreStates[index] ? data.length : 4, data.length<5 ? setShowButton[index] = false: setShowButton[index] = true).map((story, index) => {
+            <div key={index} className="lp2-image-container">
+              {data.slice(0, showMoreStates[index] ? data.length : 4, data.length<5 ? setShowButton[index] = false: setShowButton[index] = true).map((story, index2) => {
                   // console.log(story)
                   return (
-                    <div key={index} className="wrapper ">
-                      <div className={`column d-flex flex-column align-items-left edits`}>
+                    <div key={index2} className="wrapper ">
+                      <div key={index2} className={`column d-flex flex-column align-items-left edits`}>
 
                       {/* <Link
                         key={index}
@@ -101,39 +97,34 @@ const LibraryPage2 = () => {
                           },
                         }}
                       > */}
-                        <a href="\story" key={index} data={{audio: JSON.stringify(story.audio), text:JSON.stringify(story.audio)}}>
-                        <div className="lp2-image-item">
-                          <img src={story.image} alt="Card images cap" />
-                          <p>{story.title}</p>
+                        <a href="\story" key={index2} data={{audio: JSON.stringify(story.audio), text:JSON.stringify(story.audio)}}>
+                        <div key={index2} className="lp2-image-item">
+                          <img key={index2}src={story.image} alt="Card images cap" />
+                          <p key={index2}>{story.title}</p>
                         </div>
                         </a>
                         {/* </Link> */}
                       </div>
                     </div>
-                  )
-                
-                })
-                
-                
+                  )  
+                })  
               }
-
             </div>
           
-              {showButton[index] && !showMoreStates[index] && <MyButton name="Show More" onClick={() => toggleShowMore(index)}/>}
-              {showButton[index] && showMoreStates[index] && <MyButton name="Show Less" onClick={() => toggleShowMore(index)}/>}
+              {showButton[index] && !showMoreStates[index] && <MyButton key={index} name="Show More" onClick={() => toggleShowMore(index)}/>}
+              {showButton[index] && showMoreStates[index] && <MyButton key={index} name="Show Less" onClick={() => toggleShowMore(index)}/>}
         
           </div>
         )
-      
 
       })
       }
 
-      {/* ///////////// */}
+{/* 
       {all_images.map((images,index) => (
         <>
 
-          <div className="lib-page">
+           <div className="lib-page">
           <h1>{all_titles[index]}</h1>
 
           <div className="lp2-image-container">
@@ -148,18 +139,13 @@ const LibraryPage2 = () => {
           
           {!showMoreStates[index] && <MyButton name="Show More" onClick={() => toggleShowMore(index)}/>}
           {showMoreStates[index] && <MyButton name="Show Less" onClick={() => toggleShowMore(index)}/>}
-          
-          {/* {!showMoreStates[index] && <h2 onClick={() => toggleShowMore(index)}>SHOW MORE STORIES</h2>}
-          {showMoreStates[index] && <h2 onClick={() => toggleShowMore(index)}>SHOW LESS</h2>}
-           */}
-          {/* <div className="show-more" onClick={() => toggleShowMore(index)}>
-            {!showMoreStates[index] && <p>SHOW MORE STORIES</p>}
-            {showMoreStates[index] && <p>SHOW LESS</p>}
-          </div> */}
+
         </div>
+        
       </>
       ))}
-  
+   */}
+
     </>
   )
 }
