@@ -68,9 +68,12 @@ export const uploadStory = async (req, res) => {
 
 }
 
+// console.log("Reached here1")
 export const getStories = async (req, res) => {
     try {
-        getDocs(collection(db, "Library")).then((querySnapshot) => {
+        // console.log("Reached here2")
+        getDocs(collection(db, "Stories")).then((querySnapshot) => {
+            console.log("Checking", querySnapshot);
             let dataItems = [];
             let genres = [];
             querySnapshot.forEach((doc) => {

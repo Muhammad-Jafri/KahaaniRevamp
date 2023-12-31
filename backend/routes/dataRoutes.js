@@ -9,6 +9,7 @@ const upload = multer({ storage: storage }).fields([
     { name: 'image', maxCount: 1 },
 ]);
 
+
 router.post("/postStory", upload, uploadStory);
 router.get("/getStories", getStories)
 

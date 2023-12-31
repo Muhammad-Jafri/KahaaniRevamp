@@ -10,21 +10,26 @@ import './storypage.css'
 import 'tippy.js/dist/tippy.css'
 import 'reactjs-popup/dist/index.css'
 import "../../common/audioPlayer/audioPlayer.css"
-// import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 
 /*
 Code taken from: https://www.codepunker.com/blog/sync-audio-with-text-using-javascript
 */
 
-const StoryPage = (props) => {
-    
-    var audio = JSON.parse(props.audio) || null;
-    var text = JSON.parse(props.text) || null;
-    var img = null;
-    var title = null;
+const StoryPage = ({data}) => {
 
-    console.log("checkkk audio", audio);
+    // const location = useLocation();
+    // const queryParams = new URLSearchParams(location.search);
+    // let audio = queryParams.get('audio');
+    // let text = queryParams.get('text');
+    
+    // let { audio, text } = props.location.state
+    
+    let audio, text, img, title;
+    // let img, title;
+    
+    console.log("checkkk audio", audio, data);
 
 
    

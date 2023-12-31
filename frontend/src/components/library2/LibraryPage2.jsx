@@ -4,7 +4,7 @@ import './LibraryPage2.css'
 import Navbar from '../../common/navbar/Navbar';
 import SearchBar from '../../common/SearchBar/SearchBar';
 import MyButton from '../../common/Button/MyButton'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function LibraryPage2 () {
   
@@ -33,7 +33,7 @@ function LibraryPage2 () {
   const [library, setLibrary] = useState(null);
 
   useEffect(() => {
-    axios.get("https://kahaani-backend.onrender.com/api/story/getStories").then(
+    axios.get("http://localhost:3000/api/myStories").then(
       response => {
         console.log(response.data.dataItems);
         const dee = response.data.dataItems;
@@ -69,14 +69,14 @@ function LibraryPage2 () {
       <Navbar />
       <SearchBar />
       
-      {library && Object.keys(library).map((genre, index) => {
-        const data2 = library[genre];
+      {library && Object.keys(library).map((category, index) => {
+        const data2 = library[category];
         const data = data2.flatMap(story => [story, { ...story }]);
         console.log("Checkk", data)
 
         return(
           <div key={index} className="lib-page">
-            <h1>{genre !== "undefined" ? genre : "Other"}</h1>
+            <h1>{category !== "undefined" ? category : "Other"}</h1>
 
             <div key={index} className="lp2-image-container">
               {data.slice(0, showMoreStates[index] ? data.length : 4, data.length<5 ? setShowButton[index] = false: setShowButton[index] = true).map((story, index2) => {
@@ -89,21 +89,16 @@ function LibraryPage2 () {
                         key={index}
                         to={{
                           pathname: '/story',
-                          state: {
-                            audio: story.audio,
-                            text: story.text,
-                            title: story.title,
-                            img: story.image,
-                          },
+                          search: `?audio=${encodeURIComponent(story.audio_url)}&text=${encodeURIComponent(story.story_text)}`,
                         }}
                       > */}
-                        <a href="\story" key={index2} data={{audio: JSON.stringify(story.audio), text:JSON.stringify(story.audio)}}>
+                        <a href="\story" key={index2} data={{audio: story.audio_url, text:story.story_text}}>
                         <div key={index2} className="lp2-image-item">
-                          <img key={index2}src={story.image} alt="Card images cap" />
-                          <p key={index2}>{story.title}</p>
+                          <img key={index2}src={story.story_image} alt="Card images cap" />
+                          <p key={index2}>{story.story_title}</p>
                         </div>
                         </a>
-                        {/* </Link> */}
+                      {/* </Link> */}
                       </div>
                     </div>
                   )  

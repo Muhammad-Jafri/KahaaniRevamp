@@ -17,15 +17,34 @@ import { getStorage } from "firebase/storage";
 //   appId: "1:609376881408:web:b42511ca8422c7f6c341e5",
 //   measurementId: "G-BQBX97VEW6"
 // };
+
+
+
+// const firebaseConfig = {
+//   apiKey: "AIzaSyAl6msIj3mRbwnslQDwZNLhCgB_nNgkcAU",
+//   authDomain: "kahaani-55fc7.firebaseapp.com",
+//   projectId: "kahaani-55fc7",
+//   storageBucket: "kahaani-55fc7.appspot.com",
+//   messagingSenderId: "1053660490720",
+//   appId: "1:1053660490720:web:c9b91fa5ef9710575c1985",
+//   measurementId: "G-SSGY67QE1S"
+// };
+
+
+
+
 const firebaseConfig = {
-  apiKey: "AIzaSyAl6msIj3mRbwnslQDwZNLhCgB_nNgkcAU",
-  authDomain: "kahaani-55fc7.firebaseapp.com",
-  projectId: "kahaani-55fc7",
-  storageBucket: "kahaani-55fc7.appspot.com",
-  messagingSenderId: "1053660490720",
-  appId: "1:1053660490720:web:c9b91fa5ef9710575c1985",
-  measurementId: "G-SSGY67QE1S"
+  apiKey: "AIzaSyC09MRmTfmzQDQjY0FvOH5jnoNqRUTqFYw",
+  authDomain: "kahaani-3af12.firebaseapp.com",
+  projectId: "kahaani-3af12",
+  storageBucket: "kahaani-3af12.appspot.com",
+  messagingSenderId: "489892307631",
+  appId: "1:489892307631:web:42beb54e6ce71a9d8aea5a",
+  measurementId: "G-FYTZKVC8VX"
 };
+
+
+
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 export const storage = getStorage(app);
