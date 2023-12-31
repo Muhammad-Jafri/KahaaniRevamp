@@ -4,6 +4,7 @@ import './LibraryPage2.css'
 import Navbar from '../../common/navbar/Navbar';
 import SearchBar from '../../common/SearchBar/SearchBar';
 import MyButton from '../../common/Button/MyButton'
+import { defer } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 
 function LibraryPage2 () {
@@ -35,10 +36,10 @@ function LibraryPage2 () {
   useEffect(() => {
     axios.get("https://kahaani-backend.onrender.com/api/story/getStories").then(
       response => {
-        console.log(response.data.dataItems);
+        // console.log(response.data.dataItems);
         const dee = response.data.dataItems;
         setLibrary(dee)
-        console.log("Library", library)
+        console.log("Library", dee)
       }
     )
       .catch(err => {
@@ -53,7 +54,8 @@ function LibraryPage2 () {
 
 
   const [showMoreStates, setShowMoreStates] = useState(all_images.map(() => false));
-  const [showButton, setShowButton] = useState(all_images.map(() => true));
+  const [showButton, setShowButton] = useState([false, true, false, false]);
+  // const [showButton, setShowButton] = useState(library.map(() => true));
 
   const toggleShowMore = (index) => {
     setShowMoreStates((prevStates) => {
@@ -70,20 +72,20 @@ function LibraryPage2 () {
       <SearchBar />
       
       {library && Object.keys(library).map((genre, index) => {
-        const data2 = library[genre];
-        const data = data2.flatMap(story => [story, { ...story }]);
-        console.log("Checkk", data)
+        const data = library[genre];
+        // const data = data2.flatMap(story => [story, { ...story }]);
+        // console.log("Checkk", data)
 
         return(
           <div key={index} className="lib-page">
             <h1>{genre !== "undefined" ? genre : "Other"}</h1>
 
-            <div key={index} className="lp2-image-container">
-              {data.slice(0, showMoreStates[index] ? data.length : 4, data.length<5 ? setShowButton[index] = false: setShowButton[index] = true).map((story, index2) => {
-                  // console.log(story)
+            <div className="lp2-image-container">
+              {data.slice(0, showMoreStates[index] ? data.length : 4, data.length>4 ? setShowButton[index] = true: setShowButton[index] = false).map((story, index2) => {
+                  // console.log("Showinggg", showButton[index], data.length)
                   return (
                     <div key={index2} className="wrapper ">
-                      <div key={index2} className={`column d-flex flex-column align-items-left edits`}>
+                      <div className={`column d-flex flex-column align-items-left edits`}>
 
                       {/* <Link
                         key={index}
@@ -97,10 +99,11 @@ function LibraryPage2 () {
                           },
                         }}
                       > */}
-                        <a href="\story" key={index2} data={{audio: JSON.stringify(story.audio), text:JSON.stringify(story.audio)}}>
-                        <div key={index2} className="lp2-image-item">
-                          <img key={index2}src={story.image} alt="Card images cap" />
-                          <p key={index2}>{story.title}</p>
+                        {/* <a href="\story" data={{audio: JSON.stringify(story.audio), text:JSON.stringify(story.audio)}}> */}
+                        <a href="\story" onClick={()=>localStorage.setItem('Props', JSON.stringify(story))}>
+                        <div className="lp2-image-item">
+                          <img src={story.image} alt="Card images cap" />
+                          <p>{story.title}</p>
                         </div>
                         </a>
                         {/* </Link> */}

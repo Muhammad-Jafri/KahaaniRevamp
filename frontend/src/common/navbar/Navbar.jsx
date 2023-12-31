@@ -15,7 +15,7 @@ const Navbar = () => {
   
 
         <div className='Navbar-content'>
-          <p>Listen to Stories</p>
+          <p onClick={()=>{window.location.href = '/library'}}>Listen to Stories</p>
           
           <p>Give Feedback</p>
 

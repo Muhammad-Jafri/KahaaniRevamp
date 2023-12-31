@@ -19,21 +19,43 @@ Code taken from: https://www.codepunker.com/blog/sync-audio-with-text-using-java
 
 const StoryPage = (props) => {
     
-    var audio = JSON.parse(props.audio) || null;
-    var text = JSON.parse(props.text) || null;
-    var img = null;
-    var title = null;
+    const [story, setStory] = useState(null);
+    let audio, text, img, title;
 
-    console.log("checkkk audio", audio);
+    useEffect(() => {
+      // Retrieve and deserialize data from localStorage
+      const storedData = localStorage.getItem('Props');
+      setStory(JSON.parse(storedData));
+    //   if (storedData) {
+    //   }
+        console.log("Checking story inside", story)
+    }, []);
 
+    console.log("checking recieved story", story)
+    // audio = story.audio;
+    // text = story.text;
+    // img = story.img;
+    // title = story.title;
 
-   
-    audio = audio? audio:'https://firebasestorage.googleapis.com/v0/b/kahaani-55fc7.appspot.com/o/audio%2FChalakchiriya.wav?alt=media&token=75be835b-7aa2-4fc6-a050-0940a04298c6';
-    text = text? text: [{"end":"1.2","start":"0.0","text":"ایک چڑیا تھی","type":0},{"end":"2.2","start":"1.2","text":"اس کا نام جنسی","type":0},{"end":"3.0","start":"2.2","text":"تھا ایک دن","type":0},{"end":"4.7","start":"3.0","text":"کی بات ہے کہ چیچڑیاں","type":0},{"end":"5.0","start":"4.7","text":"گائے","type":0},{"end":"6.1","start":"5.0","text":"کے پاس بیٹھی تھی","type":0},{"end":"7.0","start":"6.1","text":"اور وہ دانے","type":0},{"end":"8.0","start":"7.0","text":"چکر کھا رہی","type":0},{"end":"10.9","start":"8.0","text":"تھی اور اس","type":0},{"end":"11.9","start":"10.9","text":"کی","type":0},{"end":"12.3","start":"11.9","text":"پرواہ","type":0},{"end":"13.0","start":"12.3","text":"نہ کی اور","type":0},{"end":"14.0","start":"13.0","text":"دوسری طرف سے","type":0},{"end":"15.1","start":"14.0","text":"ایک کتا یا چھریاں","type":0},{"end":"16.2","start":"15.1","text":"نے اس سے کہا کہ","type":0},{"end":"17.5","start":"16.2","text":"بھائی کہتے مجھے نکال","type":0},{"end":"18.2","start":"17.5","text":"کرتے نے کہا","type":0},{"end":"19.3","start":"18.2","text":"کہ میں اگر نکالوں","type":0},{"end":"20.0","start":"19.3","text":"گا تو میں تجھے","type":0},{"end":"21.0","start":"20.0","text":"کھا لوں گا چڑیا","type":0},{"end":"22.1","start":"21.0","text":"نے کھا","type":0},{"end":"23.0","start":"22.1","text":"لینا کتنا ہے","type":0},{"end":"24.0","start":"23.0","text":"کیا کو پھر سے","type":0},{"end":"25.1","start":"24.0","text":"باہر نکالا اور","type":0},{"end":"26.4","start":"25.1","text":"جولیا نے کہا مجھے","type":0},{"end":"27.3","start":"26.4","text":"دوبارہ کتاب","type":0},{"end":"28.1","start":"27.3","text":"شریعت کونسل","type":0},{"end":"29.0","start":"28.1","text":"پر لے گیا وہ","type":0},{"end":"30.4","start":"29.0","text":"چڑیا کو دھو کر اسے","type":0},{"end":"31.0","start":"30.4","text":"کھانے لگا","type":0},{"end":"32.3","start":"31.0","text":"چڑیا نے کہا مجھے","type":0},{"end":"33.1","start":"32.3","text":"سکھا تو لے کر","type":0},{"end":"36.3","start":"33.1","text":"کھا لینا دیر","type":0},{"end":"37.1","start":"36.3","text":"میں چڑیا کے","type":0},{"end":"38.0","start":"37.1","text":"پر سو گئے اور","type":0},{"end":"39.1","start":"38.0","text":"وہ پھر سے ورگی","type":0},{"end":"40.1","start":"39.1","text":"کتاب منہ دیکھتا","type":0},{"end":"40.4","start":"40.1","text":"رہ گیا","type":0}]
-    img = img? img: "https://images.freeimages.com/images/large-previews/155/bridge-1559052.jpg?fmt=webp&w=350";
-    title = title? title: "Pyaray bachay";
-
+    
     const author = "Morle Minto";
+    // console.log("Is this coming first?")
+    audio = story != null? story.audio:'https://firebasestorage.googleapis.com/v0/b/kahaani-55fc7.appspot.com/o/audio%2FChalakchiriya.wav?alt=media&token=75be835b-7aa2-4fc6-a050-0940a04298c6';
+    text =story != null? JSON.parse(story.text): [{"end":"1.2","start":"0.0","text":"ایک چڑیا تھی","type":0},{"end":"2.2","start":"1.2","text":"اس کا نام جنسی","type":0},{"end":"3.0","start":"2.2","text":"تھا ایک دن","type":0},{"end":"4.7","start":"3.0","text":"کی بات ہے کہ چیچڑیاں","type":0},{"end":"5.0","start":"4.7","text":"گائے","type":0},{"end":"6.1","start":"5.0","text":"کے پاس بیٹھی تھی","type":0},{"end":"7.0","start":"6.1","text":"اور وہ دانے","type":0},{"end":"8.0","start":"7.0","text":"چکر کھا رہی","type":0},{"end":"10.9","start":"8.0","text":"تھی اور اس","type":0},{"end":"11.9","start":"10.9","text":"کی","type":0},{"end":"12.3","start":"11.9","text":"پرواہ","type":0},{"end":"13.0","start":"12.3","text":"نہ کی اور","type":0},{"end":"14.0","start":"13.0","text":"دوسری طرف سے","type":0},{"end":"15.1","start":"14.0","text":"ایک کتا یا چھریاں","type":0},{"end":"16.2","start":"15.1","text":"نے اس سے کہا کہ","type":0},{"end":"17.5","start":"16.2","text":"بھائی کہتے مجھے نکال","type":0},{"end":"18.2","start":"17.5","text":"کرتے نے کہا","type":0},{"end":"19.3","start":"18.2","text":"کہ میں اگر نکالوں","type":0},{"end":"20.0","start":"19.3","text":"گا تو میں تجھے","type":0},{"end":"21.0","start":"20.0","text":"کھا لوں گا چڑیا","type":0},{"end":"22.1","start":"21.0","text":"نے کھا","type":0},{"end":"23.0","start":"22.1","text":"لینا کتنا ہے","type":0},{"end":"24.0","start":"23.0","text":"کیا کو پھر سے","type":0},{"end":"25.1","start":"24.0","text":"باہر نکالا اور","type":0},{"end":"26.4","start":"25.1","text":"جولیا نے کہا مجھے","type":0},{"end":"27.3","start":"26.4","text":"دوبارہ کتاب","type":0},{"end":"28.1","start":"27.3","text":"شریعت کونسل","type":0},{"end":"29.0","start":"28.1","text":"پر لے گیا وہ","type":0},{"end":"30.4","start":"29.0","text":"چڑیا کو دھو کر اسے","type":0},{"end":"31.0","start":"30.4","text":"کھانے لگا","type":0},{"end":"32.3","start":"31.0","text":"چڑیا نے کہا مجھے","type":0},{"end":"33.1","start":"32.3","text":"سکھا تو لے کر","type":0},{"end":"36.3","start":"33.1","text":"کھا لینا دیر","type":0},{"end":"37.1","start":"36.3","text":"میں چڑیا کے","type":0},{"end":"38.0","start":"37.1","text":"پر سو گئے اور","type":0},{"end":"39.1","start":"38.0","text":"وہ پھر سے ورگی","type":0},{"end":"40.1","start":"39.1","text":"کتاب منہ دیکھتا","type":0},{"end":"40.4","start":"40.1","text":"رہ گیا","type":0}]
+    img = story != null? story.image: "https://images.freeimages.com/images/large-previews/155/bridge-1559052.jpg?fmt=webp&w=350";
+    title = story != null? story.title: "Pyaray bachay";
+
+
+    // var audio = JSON.parse(props.audio) || null;
+    // var text = JSON.parse(props.text) || null;
+    // var img = null;
+    // var title = null;
+
+    // console.log("checkkk audio", audio);
+    
+
+
+    
     
     
 
@@ -130,6 +152,10 @@ const StoryPage = (props) => {
     const textJSON = JSON.stringify(text);
 
     const syncData = JSON.parse(textJSON);
+    // const syncData = text;
+    // console.log("Check sync data1", typeof(syncData))
+    // console.log("Check sync data222", syncData[0])
+    // console.log("Check ssyncDataync data2", syncData.map((data, i) => {console.log(i)}))
 
    
 
