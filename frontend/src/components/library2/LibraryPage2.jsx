@@ -54,7 +54,7 @@ function LibraryPage2 () {
 
 
   const [showMoreStates, setShowMoreStates] = useState(all_images.map(() => false));
-  const [showButton, setShowButton] = useState([false, true, false, false]);
+  const [showButton, setShowButton] = useState([false, true, false, false, true, false]);
   // const [showButton, setShowButton] = useState(library.map(() => true));
 
   const toggleShowMore = (index) => {
